@@ -1,6 +1,6 @@
 # NathanStrik.nl - Open Source
 
-[NathanStrik.nl](https://www.nathanstrik.nl/) is the personal website of Nathan Strik and includes a sampling of web work, as well as some personal work.
+[NathanStrik.nl](https://www.nathanstrik.nl/) is the personal website of Nathan Strik.
 
 The language of this website is Dutch. An English version will be worked on if demand requires it.
 
