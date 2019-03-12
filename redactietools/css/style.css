@@ -1,0 +1,797 @@
+/* SHOW ALL BOXES
+
+* {
+   border: 1px solid red !important;
+}
+
+END OF SHOW ALL BOXES */
+
+/*
+===========================
+Eric Meyer's Reset CSS v2.0
+===========================
+http://meyerweb.com/eric/tools/css/reset/
+http://cssreset.com
+*/
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{
+	display: block;
+}
+
+body
+{
+	line-height: 1;
+}
+
+ol, ul
+{
+	list-style: none;
+}
+
+blockquote, q
+{
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after
+{
+	content: '';
+	content: none;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END OF CSS RESET */
+
+
+/* Common CSS rules */
+
+p
+{
+	margin-bottom: 1.3em;
+	margin-left: 6px;
+	font-family: Tahoma,Arial,Helvetica,Sans-Serif;
+	font-size: 1em;
+	line-height: 1.8181em;
+}
+
+#h-editor
+{
+	font-family: 'SteelfishEbRegular', Arial, sans-serif;
+	font-size: 2.1em;
+	text-transform: none;
+	font-weight: normal;
+	color: #5D5D5D;
+	margin-left: 15px;
+}
+
+#h-voorproef
+{
+	font-family: 'SteelfishEbRegular', Arial, sans-serif;
+	font-size: 2.1em;
+	text-transform: none;
+	font-weight: normal;
+	color: #5D5D5D;
+	margin-left: 15px;
+}
+
+h1
+{
+	font-family: 'SteelfishEbRegular', Arial, sans-serif;
+	margin: 0.1em;
+	font-size: 3em;
+	color: #FFFFFF;
+}
+
+h1 a:link, h1 a:visited
+{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+h2
+{
+	margin-bottom: 0.4em;
+    margin-left: 0.2em;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+h3
+{
+	margin-left: 5px;
+	margin-bottom: 0.3em;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+h4
+{
+	margin-bottom: 0.2em;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+h5
+{
+	margin-bottom: 0.1em;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+h6
+{
+	margin-bottom: 0.1em;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+em, i
+{
+	font-style:italic;
+}
+
+strong, b
+{
+	font-weight: bold;
+}
+
+ol
+{
+	margin-left: 1.5em;
+	margin-bottom: 1.3em;
+	list-style-type: decimal;
+}
+
+ul
+{
+	margin-left: 1.5em;
+	margin-bottom: 1.3em;
+	list-style-type: disc;
+}
+
+li
+{
+    margin-bottom: 0.5em;
+}
+
+code
+{
+	font-size: 1em;
+}
+
+
+blockquote
+{
+	color: #8A8A8A;
+	background: #e9e7eb;
+	margin: 1.5em 10px;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before
+{
+	color: #B1B1B1;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.15em;
+	vertical-align: -0.4em;
+}
+
+blockquote:after
+{
+	color: #B1B1B1;
+	content: close-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-left: 0.15em;
+	vertical-align: -0.4em;
+}
+
+blockquote p
+{
+	display: inline;
+}
+
+
+/* Header for Nathan */
+
+#header
+{
+	background-color: #B1BBC3;
+	margin: 0px;
+	padding: 1.2em 1.5em;
+	vertical-align: top;
+}
+
+
+
+/* CSS for navigation menu */
+
+.menucontainer
+{
+	background-color: #A3ABB2;
+	height: 30px;
+	margin: 0px;
+	vertical-align: top;
+}
+
+.menulist
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+.menuitem
+{
+	float: left;
+}
+
+.menuanchor:link, .menuanchor:visited
+{
+	display:block;
+	height: 14px;
+	color:#FFFFFF;
+	background-color:#A3ABB2;
+	text-align:center;
+	margin-left: 10px;
+	padding:8px 20px;
+	text-decoration:none;
+	font-size: 0.9em;
+}
+
+.menuanchor:hover, .menuanchor:active
+{
+	background-color:#B1BBC3
+}
+
+.menucurrent
+{
+	display: block;
+	height: 14px;
+	color: #5D5D5D;
+	background-color: #DEDEDE;
+	text-align: center;
+	margin-left: 10px;
+	padding:8px 20px;
+	text-decoration: none;
+	font-size: 0.9em;
+}
+
+.menucurrent:link, .menucurrent:visited
+{
+	color: #5D5D5D;
+	text-decoration: none;
+}
+
+
+
+/* Page container */
+
+#container
+{
+	width: 1000px;
+	margin: none;
+	padding: none;
+	background-color: #DEDEDE;
+	overflow: hidden;
+	clear:both;
+}
+
+
+/* CSS for buttons */
+
+.fancy-button-reset-base-class, body #nav button
+{
+	font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+/*	background: url('images/button_bg_C605BCBA.png') repeat-x bottom left; */
+	width: auto;
+	overflow: visible;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	border-style: solid;
+	font-weight: bold;
+}
+
+.fancy-button-reset-base-class::-moz-focus-inner, body #nav button::-moz-focus-inner
+{
+	border: none; padding: 0;
+}
+
+.fancy-button-reset-base-class:focus, body #nav button:focus
+{
+	outline: none;
+}
+
+
+/* CSS for page */
+
+a:link {
+	color: #BD4728;
+	text-decoration: none;
+}		/* unvisited link */
+
+a:visited {
+	color:#9E4636;
+	text-decoration: none;
+}  		/* visited link */
+
+a:hover {
+	color:#9E4636;
+	text-decoration: underline;
+}  		/* mouse over link */
+
+a:active {
+	color:#9E4636;
+	text-decoration: none;
+}  		/* selected link */
+
+.articletext
+{
+	font-family: helvetica, verdana, arial, serif;
+	margin: 20px;
+	padding: 20px;
+	background: #FFFFFF;
+}
+
+.articletext h2
+{
+	color: #5D5D5D;
+    font-family: 'SteelfishEbRegular',Arial,sans-serif;
+    font-size: 2.1em;
+    font-weight: normal;
+    margin-left: 5px;
+    text-transform: none;
+}
+
+#oldText
+{
+	margin-left: 10px;
+	width: 455px;
+	height: 400px;
+}
+
+
+#newText
+{
+	width: 503px;
+	height: 400px;
+}
+
+
+body
+{
+	font-family: helvetica, verdana, arial, serif;
+	background: #676363;
+	margin: auto;
+	width: 995px;
+}
+
+body #editor, body #voorproefcontainer
+{
+	width: 480px;
+	float: left;
+}
+
+body #editor #title
+{
+	width: 230px;
+	border: 1px solid #000000;
+	margin-left: 20px;
+	font-size: 2em;
+	padding: 0 10px;
+}
+
+body #nav
+{
+	margin: 25px 0px;
+	padding: 0.2em 1.3em;
+}
+
+body #nav button
+{
+	background-color:#3d94f6;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #337fed;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:12px;
+	font-weight:bold;
+	font-style:normal;
+	padding: 5px 20px;
+	line-height:21px;
+	text-decoration:none;
+	text-align:center;
+}
+
+
+body #nav button:active
+{
+	position:relative;
+	top:1px;
+}
+
+body #menu
+{
+	margin: 10px auto;
+	text-align: right;
+}
+
+body #footer
+{
+	color: #535353;
+	background-color: #A3ABB2;
+	margin: 20px 0px;
+	padding: 2em 0.5em 1em;
+	text-align: center;
+	font-size: 0.75em;
+	float: left;
+	width: 1000px;
+}
+
+body pre
+{
+	font-size: 13px;
+	font-family: monospace;
+	background-color: #000;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+	width: 95%;
+	margin: 1em auto;
+	padding: 1em;
+}
+
+body pre .str
+{
+	color: #65B042;
+}
+
+body pre .kwd
+{
+	color: #E28964;
+}
+
+body pre .com
+{
+	color: #AEAEAE;
+	font-style: italic;
+}
+
+body pre .typ
+{
+	color: #89bdff;
+}
+
+body pre .lit
+{
+	color: #3387CC;
+}
+
+body pre .pun
+{
+	color: #fff;
+}
+
+body pre .pln
+{
+	color: #fff;
+}
+
+body pre .tag
+{
+	color: #89bdff;
+}
+
+body pre .atn
+{
+	color: #bdb76b;
+}
+
+body pre .atv
+{
+	color: #65B042;
+}
+
+body pre .dec
+{
+	color: #3387CC;
+}
+
+div.grippie
+{
+	background: #eeeeee url(../images/grippie.png) no-repeat scroll center 2px;
+	border-color: #DDDDDD;
+	border-style: solid;
+	border-width: 0pt 1px 1px;
+	margin-left: 10px;
+	cursor: s-resize;
+	height: 9px;
+	overflow: hidden;
+}
+
+#copy_md, #copy_html
+{
+	display: inline-block;
+	position: relative;
+}
+
+.wmd-panel
+{
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 500px;
+	min-width: 500px;
+}
+
+#wmd-input
+{
+	height: 400px;
+	width: 447px;
+	background-color: #FFFFFF;
+	border: 1px solid #EFEFEF;
+	font-family: verdana;
+	font-size: 14px;
+	padding: 10px;
+	margin-left: 10px;
+}
+
+#wmd-preview
+{
+	width: 460px;
+	background-color: #FFFFFF;
+	margin-left: 10px;
+	float: left;
+	font-size: 14px;
+	padding: 20px;
+}
+
+#wmd-preview img
+{
+	border: 1px solid #BAB5B5;
+}
+
+#wmd-preview a
+{
+	color: #AD1020;
+}
+
+#wmd-preview a:hover
+{
+	color: #ec3749;
+}
+
+#wmd-output
+{
+	width: 98%;
+	background-color: #FFFFF1;
+	border: 1px solid #FFF9C3;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+#copy_md
+{
+	display: none;
+}
+
+/* WMD Buttons for Markdown Live Editor */
+
+#wmd-button-bar
+{
+	width: 463px;
+	height: 40px;
+	background-color: #FEFEFE;
+	border: 1px solid #EFEFEF;
+	margin-bottom: 2px;
+	margin-left: 10px;
+	padding: 2px;
+}
+
+#wmd-button-bar #wmd-button-row
+{
+	position: relative;
+	margin: 10px 5px 5px 5px;
+	padding: 0px;
+	height: 20px;
+	background: #fff;
+}
+
+#wmd-button-bar #wmd-button-row .wmd-button
+{
+	width: 20px;
+	height: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+	position: absolute;
+	background: url(../images/wmd-buttons.png) no-repeat;
+	display: inline-block;
+	list-style: none;
+}
+
+#wmd-button-bar #wmd-button-row .wmd-spacer
+{
+	width: 1px;
+	height: 20px;
+	margin-left: 14px;
+	position: absolute;
+	background-color: Silver;
+	display: inline-block;
+	list-style: none;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-bold-button
+{
+	left: 0px;
+	background-position: 0px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-italic-button
+{
+	left: 25px;
+	background-position: -20px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-spacer1
+{
+	left: 50px;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-link-button
+{
+	left: 75px;
+	background-position: -40px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-quote-button
+{
+	left: 100px;
+	background-position: -60px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-code-button
+{
+	left: 125px;
+	background-position: -80px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-image-button
+{
+	left: 150px;
+	background-position: -100px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-spacer2
+{
+	left: 175px;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-olist-button
+{
+	left: 200px;
+	background-position: -120px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-ulist-button
+{
+	left: 225px;
+	background-position: -140px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-heading-button
+{
+	left: 250px;
+	background-position: -160px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-hr-button
+{
+	left: 275px;
+	background-position: -180px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-spacer3
+{
+	left: 300px;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-undo-button
+{
+	left: 325px;
+	background-position: -200px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-redo-button
+{
+	left: 350px;
+	background-position: -220px 0;
+}
+
+#wmd-button-bar #wmd-button-row #wmd-help-button
+{
+	right: 0px;
+	display: none;
+	background-position: -240px 0;
+}
+
+.wmd-prompt-background
+{
+	background-color: Black;
+}
+
+.wmd-prompt-dialog
+{
+	border: 1px solid #999999;
+	background-color: #F5F5F5;
+}
+
+.wmd-prompt-dialog div
+{
+	font-size: 0.8em;
+	font-family: arial, helvetica, sans-serif;
+}
+
+.wmd-prompt-dialog form input[type="text"]
+{
+	border: 1px solid #999999;
+	color: black;
+}
+
+.wmd-prompt-dialog form input[type="button"]
+{
+	border: 1px solid #888888;
+	font-family: trebuchet MS, helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+#wmd-output
+{
+	display: none;
+}
+
+#wmd-output pre
+{
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
+}

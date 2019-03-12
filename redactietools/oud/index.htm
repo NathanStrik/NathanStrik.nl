@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!-- Deze code is gebaseerd op open source software als Markdown en WMD en is niet bedoeld voor commerciële verkoop -->
+
+<html>
+  <head>
+    <title>Nathan's Redactietools | Alles voor de webredacteur van nú</title>
+
+	
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="webfonts/stylesheet.css" rel="stylesheet" type="text/css" charset="utf-8" />
+
+    <script language="javascript" src="javascripts/libs.js" type="text/javascript"></script>
+	<script language="javascript" src="javascripts/script.js" type="text/javascript"></script>
+	
+  </head>
+  <body>
+  
+  <div id="container">
+  
+  
+  
+	<div id="header">
+	<h1>Nathan's Redactietools | Markdownverwerker</h1>
+	</div>
+	
+	<div id="navigation">
+	<p>Meer redactietools volgen binnenkort...</p>
+<!--	<p>Markdownverwerker | Regeleindeverwijderaar | Over</p>   -->
+	</div>
+  
+        <div id="nav">
+        <button id="clear">Wis editor</button>
+		<span id="copy_md">
+          <button id="copy_md_btn">Kopieer Markdown</button>
+        </span>
+		<span id="copy_html">
+          <button id="copy_html_btn">Kopieer HTML</button>
+        </span>
+      </div>
+  
+    <div id="editor">
+	<h2 id="h-editor">Markdown Editor</h2>
+      <div id="wmd-button-bar"></div>
+      <textarea class="resizable" id="wmd-input" name="wmd-input">&#x000A;##Over de Markdownverwerker##&#x000A;&#x000A;Dit is een live [Markdown][1] editor op basis van [WMD][2] en andere open source tools. Ik gebruik het om posts voor [VideoBytes][3] en andere websites te maken.&#x000A;&#x000A;###Gebruik###&#x000A;&#x000A;Druk op de *Kopieer HTML* knop om de code te verkrijgen die je in een HTML-veld in je CMS kunt plakken.&#x000A;&#x000A;> *Als je browser HTML 5 ondersteunt, wordt deze tekst bewaard.*&#x000A;&#x000A;Klik [hier][5] om meer te lezen over Markdown.&#x000A;&#x000A;[1]: https://daringfireball.net/projects/markdown/&#x000A;[2]: https://github.com/derobins/wmd/&#x000A;[3]: http://www.videobytes.nl/&#x000A;[4]: http://placehold.it/350x150&#x000A;[5]: http://daringfireball.net/projects/markdown/</textarea>
+    </div>
+	<div id="voorproefcontainer">
+		<h2 id="h-voorproef">HTML Voorproef</h2>
+		<div id="wmd-preview"></div>
+		<div id="wmd-output"></div>
+	</div>
+		
+    <div id="footer">
+<p>Redactietools samengesteld door: Nathan Strik</p>
+    </div>
+	
+</div>
+
+<script>
+jQuery(function($){
+    $('a[href^="http://"]')
+        .not('[href*="videobytes.nl"]')
+        .attr('target','_blank');
+});
+</script>	
+	
+  </body>
+</html>
