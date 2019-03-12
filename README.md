@@ -10,8 +10,8 @@ TODO: Upload image of homepage
   <img alt="Image of the NathanStrik.nl homepage" src="https://cloud.githubusercontent.com/assets/addimageofhomepage.png">
 </p> -->
 
-##Tools
+## Tools
 This site also contains the 'webredactietools' pages, that were created for web editors. The contain a page with handy links, a line break remover, a markdown editor and tips on finding royalty free images online.
 
-##Contact
+## Contact
 If you want to contact me regarding this project, please feel free to email me at [contact@nathanstrik.nl](contact@nathanstrik.nl)
