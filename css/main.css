@@ -50,6 +50,110 @@
   color: #67e2d8;
 }
 
+/* CSS for hamburger-menu */
+
+/* Normal state, i.e. menu closed */
+
+.hambutton {
+  appearance: none;
+  background: blue;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: none;
+  font-size: 0;
+  height: 50px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  text-indent: -9999px;
+  top: 0;
+  transition: background 0.3s;
+  width: 50px;
+  z-index: 3;
+}
+
+.hambutton:focus {
+  outline: none;
+}
+
+.hambutton span {
+  background: #67e2d8;
+  display: block;
+  height: 4px;
+  left: 8px;
+  position: absolute;
+  right: 8px;
+  top: 22px;
+}
+
+.hambutton span::before, .hambutton span::after {
+  background: #67e2d8;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.hambutton span::before {
+  top: -10px;
+}
+
+.hambutton span::after {
+  bottom: -10px;
+}
+
+.hambutton--htx {
+  background: #4b7791;
+}
+
+.hambutton--htx span {
+  transition: background 0s 0.2s;
+}
+
+.hambutton--htx span::before, .hambutton--htx span::after {
+  transition-delay: 0.2s, 0s;
+  transition-duration: 0.2s, 0.2s;
+}
+
+.hambutton--htx span::before {
+  transition-property: top, transform;
+}
+
+.hambutton--htx span::after {
+  transition-property: bottom, transform;
+}
+
+/* Active state, i.e. menu open */
+
+.hambutton--htx.is-active {
+  background: #195F9C;
+}
+
+.hambutton--htx.is-active span {
+  background: none;
+}
+
+.hambutton--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.hambutton--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.hambutton--htx.is-active span::before, .hambutton--htx.is-active span::after {
+  transition-delay: 0s, 0.2s;
+}
+
+/* END of CSS for hamburger-menu */
+
 ul:hover li a
 {
   transform: scale(1);
@@ -339,7 +443,39 @@ footer
 @media screen and (max-width: 600px)
 {
 
-    .biogrid-container
+  .hambutton {
+    display: block;
+  }
+
+  .menu-nav {
+    background: #4b7791;
+    display: block;
+    text-align: center;
+  }
+
+  .menu-nav {
+    height: auto;
+    position: fixed;
+    top: 50px;
+    right: -150px;
+    transition: right 0.2s;
+    width: auto;
+    padding: 15px;
+  }
+
+  .menu .nav-item {
+    left: 0px;
+  }
+
+  .menu .nav-link {
+    font-size: 20px;
+  }
+
+  .menu-nav.is-active {
+    right: 0px;
+  }
+
+  .biogrid-container
   {
     display: grid;
     grid:
