@@ -4,11 +4,9 @@
 
 The language of this website is Dutch. An English version will be worked on if demand requires it.
 
-TODO: Upload image of homepage
-
-<!-- <p align="center">
-  <img alt="Image of the NathanStrik.nl homepage" src="https://cloud.githubusercontent.com/assets/addimageofhomepage.png">
-</p> -->
+<p align="center">
+  <img alt="Image of the NathanStrik.nl homepage" src="https://user-images.githubusercontent.com/27855680/54459259-72d04980-4766-11e9-96f7-c608452db2f5.jpg">
+</p>
 
 ## Tools
 This site also contains the 'webredactietools' pages, that were created for web editors. The contain a page with handy links, a line break remover, a markdown editor and tips on finding royalty free images online.
