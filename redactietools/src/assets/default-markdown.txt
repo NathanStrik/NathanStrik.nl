@@ -1,0 +1,18 @@
+## Verkorte Markdown-handleiding
+
+Dit is een live [Markdown][1] editor op basis van [VueMarkdown][2].
+
+### Gebruik
+Plaats tekst tussen *enkele asterisken* om de tekst schuin te drukken en tussen **dubbele asterisken** voor vetgedrukte tekst.
+
+Links voeg je in door woorden tussen [vierkante haken][1] te plaatsen, met daarachter het nummer van de link (ook tussen vierkante haken). Onderaan het artikel hou je een lijstje bij met welke link bij welk nummer hoort.
+
+Snel een enkele link maken doe je door [de linktekst](http://www.google.nl/) tussen vierkante haken te plaatsen, met gelijk daarachter de link tussen ronde haken.
+
+### H-koppen maak je door één, twee, of driedubbele kardinaalteken(s) voor de kop te plaatsen
+
+Klik [hier][3] om meer te lezen over Markdown.
+
+[1]: https://daringfireball.net/projects/markdown/
+[2]: https://github.com/miaolz123/vue-markdown
+[3]: http://daringfireball.net/projects/markdown/
