@@ -21,6 +21,13 @@
     components: {
       MarkdownTools
     },
+    mounted() {
+      this.$root.$on('eraseAll', () => {
+        console.log('Erase command given!!!');
+        this.text = '';
+        document.cookie = "input=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      });
+    },
     data() {
       return {
         text: '',

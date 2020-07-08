@@ -2,7 +2,7 @@
   <div id="app">
     <i-container class="container">
       <!-- <TODO: Implement ToastMessage /> -->
-      <Actions />
+      <Actions @erase-all="eraseAll" />
       <i-row>
         <MarkdownProcessor @textupdate="changeText($event)"/>
         <HtmlPreview :text="text" />
@@ -24,9 +24,18 @@
       MarkdownProcessor,
       HtmlPreview
     },
+    mounted() {
+      this.$root.$on('eraseAll', () => {
+        console.log('Erase command given!!!');
+        this.text = '';
+      });
+    },
     methods: {
       changeText(newText) {
         this.text = newText;
+      },
+      eraseAll() {
+        this.text = 'Poep!';
       }
     },
     data() {
