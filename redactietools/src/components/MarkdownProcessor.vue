@@ -2,7 +2,8 @@
   <i-column sm="6" class="border-right">
     <h2 class="head2">Markdownverwerker</h2>
     <MarkdownTools />
-    <i-textarea 
+    <i-textarea
+      ref="textAreaMain"
       v-on:input="processText" 
       class="text-area"
       v-model="text" 
@@ -23,9 +24,13 @@
     },
     mounted() {
       this.$root.$on('eraseAll', () => {
-        console.log('Erase command given!!!');
         this.text = '';
         document.cookie = "input=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      });
+
+      this.$root.$on('boldCommand', () => {
+        this.wrapSelection('**');
+        this.processText();
       });
     },
     data() {
@@ -59,6 +64,15 @@
       processText() {
         this.fireTextUpdate();
         this.storeCookie();
+      },
+      wrapSelection(wrapTag) {
+        console.log('Wrapping shit!' + wrapTag);
+        let oldValue = this.$refs.textAreaMain.$refs.input.value;
+        let selectionStart = this.$refs.textAreaMain.$refs.input.selectionStart;
+        let selectionEnd = this.$refs.textAreaMain.$refs.input.selectionEnd;
+        let selected = oldValue.slice(selectionStart, selectionEnd);
+        this.$refs.textAreaMain.$refs.input.setRangeText(`${wrapTag}${selected}${wrapTag}`);
+        this.text = this.$refs.textAreaMain.$refs.input.value;
       },
       fireTextUpdate() {
         this.$emit('textupdate', this.text);

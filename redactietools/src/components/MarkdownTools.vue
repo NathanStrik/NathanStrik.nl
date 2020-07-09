@@ -1,7 +1,7 @@
 <template>
   <div id="markdowntools">
     <i-button-group size="sm">
-      <i-button>
+      <i-button v-on:click="emitBoldCommand">
         <fa-icon :icon="['fas', 'bold']" />
       </i-button>
       <i-button>
@@ -46,6 +46,12 @@
 
 <script>
 export default {
-  name: 'MarkdownTools'
+  name: 'MarkdownTools',
+  methods: {
+    emitBoldCommand() {
+      console.log('Emitting bold command!');
+      this.$root.$emit('boldCommand');
+    }
+  }
 }
 </script>

@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <i-container class="container">
-      <!-- <TODO: Implement ToastMessage /> -->
-      <Actions @erase-all="eraseAll" />
+      <Actions />
       <i-row>
         <MarkdownProcessor @textupdate="changeText($event)"/>
         <HtmlPreview :text="text" />
@@ -26,7 +25,6 @@
     },
     mounted() {
       this.$root.$on('eraseAll', () => {
-        console.log('Erase command given!!!');
         this.text = '';
       });
     },
@@ -73,10 +71,6 @@
 
   .text-area {
     margin: 20px 0;
-  }
-
-  .output-column {
-    background: palegoldenrod;
   }
 
 </style>
