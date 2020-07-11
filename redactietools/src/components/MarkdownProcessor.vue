@@ -14,7 +14,7 @@
 </template>
 
 <script>
-  import MarkdownTools from '../components/MarkdownTools';
+  import MarkdownTools from '@/components/MarkdownTools';
   import defaultMarkdown from '!raw-loader!../assets/default-markdown.txt';
 
   export default {
@@ -29,9 +29,24 @@
       });
 
       this.$root.$on('boldCommand', () => {
-        this.wrapSelection('**');
-        this.processText();
+        this.processSelection('**', 'wrap');
       });
+
+      this.$root.$on('italicCommand', () => {
+        this.processSelection('*', 'wrap');
+      });
+
+      this.$root.$on('h1Command', () => {
+        this.processSelection('# ', 'prefix');
+      });
+
+      this.$root.$on('h2Command', () => {
+        this.processSelection('## ', 'prefix');
+      })
+
+      this.$root.$on('h3Command', () => {
+        this.processSelection('### ', 'prefix');
+      })
     },
     data() {
       return {
@@ -57,7 +72,6 @@
       } else {
         this.text = defaultMarkdown;
       }
-
       this.fireTextUpdate();
     },
     methods: {
@@ -65,14 +79,43 @@
         this.fireTextUpdate();
         this.storeCookie();
       },
-      wrapSelection(wrapTag) {
-        console.log('Wrapping shit!' + wrapTag);
-        let oldValue = this.$refs.textAreaMain.$refs.input.value;
-        let selectionStart = this.$refs.textAreaMain.$refs.input.selectionStart;
-        let selectionEnd = this.$refs.textAreaMain.$refs.input.selectionEnd;
-        let selected = oldValue.slice(selectionStart, selectionEnd);
-        this.$refs.textAreaMain.$refs.input.setRangeText(`${wrapTag}${selected}${wrapTag}`);
-        this.text = this.$refs.textAreaMain.$refs.input.value;
+      processSelection(tag, type) {
+        let input = this.$refs.textAreaMain.$refs.input;
+        const START = input.selectionStart;
+        const END = input.selectionEnd;
+        const SELECTED = input.value.slice(START, END);
+        const LINE_NUMBER = this.getColumnNumber(input);
+
+        console.log('Line number: ' + LINE_NUMBER);
+
+        let selectedExpanded = input.value.slice(START - tag.length);
+        let removeTag = selectedExpanded.slice(0, tag.length) === tag;
+
+        console.log('Remove tag? ' + removeTag);
+
+        input.focus();
+
+        if (!removeTag && type === 'wrap') {
+          input.setRangeText(`${tag}${SELECTED}${tag}`, START, END);
+          input.setSelectionRange(START + tag.length, END + tag.length);
+        } 
+        
+        if (removeTag && type === 'wrap') {
+          input.setRangeText(SELECTED, START - tag.length, END + tag.length, 'select');
+        }
+
+        if (!removeTag && type === 'prefix') {
+          input.setRangeText(`${tag}${SELECTED}`, START, END);
+          input.setSelectionRange(START + tag.length, END + tag.length);
+        }
+
+        if (removeTag && type === 'prefix') {
+          input.setRangeText(SELECTED, START - tag.length, END, 'select');
+        }
+
+        this.text = input.value;
+        this.processText();
+
       },
       fireTextUpdate() {
         this.$emit('textupdate', this.text);
@@ -82,6 +125,10 @@
         d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
         var expires = "expires="+d.toUTCString();
         document.cookie = "input=" + escape(this.text) + ";" + expires + ";path=/";
+      },
+      getColumnNumber(textarea) {
+        var textLines = textarea.value.substr(0, textarea.selectionStart).split("\n");
+        return textLines[textLines.length-1].length;
       },
     }
   }

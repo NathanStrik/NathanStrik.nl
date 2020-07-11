@@ -1,49 +1,12 @@
 <template>
   <div id="app">
-    <i-container class="container">
-      <Actions />
-      <i-row>
-        <MarkdownProcessor @textupdate="changeText($event)"/>
-        <HtmlPreview :text="text" />
-      </i-row>
-    </i-container>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/markdown">Markdown</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
-
-<script>
-  import MarkdownProcessor from './components/MarkdownProcessor';
-  import HtmlPreview from './components/HtmlPreview';
-  import Actions from './components/Actions';
-
-  export default {
-    name: 'App',
-    title: 'Redactietools',
-    components: {
-      Actions,
-      MarkdownProcessor,
-      HtmlPreview
-    },
-    mounted() {
-      this.$root.$on('eraseAll', () => {
-        this.text = '';
-      });
-    },
-    methods: {
-      changeText(newText) {
-        this.text = newText;
-      },
-      eraseAll() {
-        this.text = 'Poep!';
-      }
-    },
-    data() {
-      return {
-        text: '',
-        visible: true
-      }
-    }
-  }
-</script>
 
 <style>
   .action-button {
@@ -71,6 +34,15 @@
 
   .text-area {
     margin: 20px 0;
+  }
+
+  .button-text {
+    position: relative;
+    top: -7px;
+    left: 1px;
+    font-weight: 650;
+    font-size: 0.9em;
+    height: 10px;
   }
 
 </style>
