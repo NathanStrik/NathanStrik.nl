@@ -9,7 +9,7 @@ import './icons.js';
 import router from './router'
 
 Vue.use(Inkline, { components });
-// VueClipboard.config.autoSetContainer = true;
+VueClipboard.config.autoSetContainer = true;
 Vue.use(VueClipboard);
 Vue.mixin(titleMixin);
 Vue.config.productionTip = false;

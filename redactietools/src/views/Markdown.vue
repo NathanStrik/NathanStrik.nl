@@ -1,24 +1,27 @@
 <template>
-  <div id="app">
-    <i-container class="container">
+  <div id="markdown">
+    <Navbar/>
+    <div class="editor">
       <Actions />
       <i-row>
         <MarkdownProcessor @textupdate="changeText($event)"/>
         <HtmlPreview :text="text" />
       </i-row>
-    </i-container>
+    </div>
   </div>
 </template>
 
 <script>
+  import Navbar from '@/views/base/Navbar.vue';
+  import Actions from '@/components/Actions';
   import MarkdownProcessor from '@/components/MarkdownProcessor';
   import HtmlPreview from '@/components/HtmlPreview';
-  import Actions from '@/components/Actions';
 
   export default {
     name: 'Markdown',
     title: 'Markdownverwerker',
     components: {
+      Navbar,
       Actions,
       MarkdownProcessor,
       HtmlPreview

@@ -1,5 +1,5 @@
 <template>
-  <i-column sm="6" class="border-right">
+  <i-column md="6" class="border-right">
     <h2 class="head2">Markdownverwerker</h2>
     <MarkdownTools />
     <i-textarea
@@ -7,7 +7,7 @@
       v-on:input="processText" 
       class="text-area"
       v-model="text" 
-      rows="26"
+      rows="17"
       placeholder="Voer hier je Markdown tekst in..." 
     />
   </i-column>
@@ -46,6 +46,14 @@
 
       this.$root.$on('h3Command', () => {
         this.processSelection('### ', 'prefix');
+      })
+      
+      this.$root.$on('olCommand', () => {
+        this.makeList('ol');
+      })
+      
+      this.$root.$on('ulCommand', () => {
+        this.makeList('ul');
       })
     },
     data() {
@@ -116,6 +124,29 @@
         this.text = input.value;
         this.processText();
 
+      },
+      makeList(type) {
+        let input = this.$refs.textAreaMain.$refs.input;
+        const START = input.selectionStart;
+        const END = input.selectionEnd;
+        const SELECTED = input.value.slice(START, END);
+        const lines = SELECTED.split('\n');
+        let list = '';
+
+        if (type === 'ol') {
+          for (var x = 1; x <= lines.length; x++) {
+            list = list + x + '. ' + lines[x-1] + '\n';
+          }
+        } else {
+          for (var y = 1; y <= lines.length; y++) {
+            list = list + '- ' + lines[y-1] + '\n';
+          }
+        }
+
+        list = list.substring(0, list.length - 1);
+        input.setRangeText(`${list}`, START, END);
+        this.text = input.value;
+        this.processText();
       },
       fireTextUpdate() {
         this.$emit('textupdate', this.text);

@@ -1,6 +1,5 @@
 <template>
   <i-row class="actions">
-    
     <i-button 
       class="action-button" 
       outline variant="danger" 
@@ -9,7 +8,6 @@
     >
       Wis alles
     </i-button>
-
     <i-button 
       class="action-button" 
       outline variant="primary" 

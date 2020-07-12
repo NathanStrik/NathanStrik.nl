@@ -1,5 +1,5 @@
 <template>
-  <i-column sm="6" id="output-column">
+  <i-column md="6" id="output-column">
     <h2 class="head2">Html voorproef</h2>
     <vue-markdown @rendered="emitRenderedHtml($event)" :source=text ref="html"></vue-markdown>
   </i-column>

@@ -1,10 +1,10 @@
 <template>
   <div id="markdowntools">
     <i-button-group size="sm">
-      <i-button title="Vetgedrukt <strong> Ctrl+B" v-on:click="emitBoldCommand">
+      <i-button title="Vetgedrukt <strong> Ctrl+B" v-on:click="emitCommand('boldCommand')">
         <fa-icon :icon="['fas', 'bold']" />
       </i-button>
-      <i-button title="Schuingedrukt <em> Ctrl+I" v-on:click="emitItalicCommand">
+      <i-button title="Schuingedrukt <em> Ctrl+I" v-on:click="emitCommand('italicCommand')">
         <fa-icon :icon="['fas', 'italic']" />
       </i-button>
     </i-button-group>
@@ -15,21 +15,21 @@
       <i-button disabled outline title="Afbeelding <img> Ctrl+G">
         <fa-icon :icon="['fas', 'image']" />
       </i-button>
-      <i-button title="Kop 1 <h1>" v-on:click="emitH1Command">
+      <i-button title="Kop 1 <h1>" v-on:click="emitCommand('h1Command')">
         <fa-icon :icon="['fas', 'heading']" /><span class="button-text">1</span>
       </i-button>
-      <i-button title="Kop 2 <h2>" v-on:click="emitH2Command">
+      <i-button title="Kop 2 <h2>" v-on:click="emitCommand('h2Command')">
         <fa-icon :icon="['fas', 'heading']" /><span class="button-text">2</span>
       </i-button>
-      <i-button title="Kop 3 <h3>" v-on:click="emitH3Command">
+      <i-button title="Kop 3 <h3>" v-on:click="emitCommand('h3Command')">
         <fa-icon :icon="['fas', 'heading']" /><span class="button-text">3</span>
       </i-button>
     </i-button-group>
     <i-button-group size="sm">
-      <i-button disabled outline title="Genummerde lijst <ol> Ctrl+O">
+      <i-button title="Genummerde lijst <ol> Ctrl+O" v-on:click="emitCommand('olCommand')">
         <fa-icon :icon="['fas', 'list-ol']" />
       </i-button>
-      <i-button disabled outline title="Ongenummerde lijst <ul> Ctrl+U">
+      <i-button title="Ongenummerde lijst <ul> Ctrl+U" v-on:click="emitCommand('ulCommand')">
         <fa-icon :icon="['fas', 'list-ul']" />
       </i-button>
       <i-button disabled outline title="Horizontale lineaal <hr> Ctrl+R">
@@ -51,20 +51,8 @@
 export default {
   name: 'MarkdownTools',
   methods: {
-    emitBoldCommand() {
-      this.$root.$emit('boldCommand');
-    },
-    emitItalicCommand() {
-      this.$root.$emit('italicCommand');
-    },
-    emitH1Command() {
-      this.$root.$emit('h1Command');
-    },
-    emitH2Command() {
-      this.$root.$emit('h2Command');
-    },
-    emitH3Command() {
-      this.$root.$emit('h3Command');
+    emitCommand(command) {
+      this.$root.$emit(command);
     }
   }
 }
