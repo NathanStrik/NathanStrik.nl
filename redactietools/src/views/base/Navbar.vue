@@ -7,9 +7,9 @@
         <i-navbar-items>
           <i-nav>
               <i-nav-item :to="{ name: 'Home' }">Home</i-nav-item>
-              <!-- <i-nav-item :to="{ name: 'Markdownverwerker' }">Regeleindeverwijderaar</i-nav-item> -->
+              <i-nav-item :to="{ name: 'Regeleindeverwijderaar' }">Regeleindeverwijderaar</i-nav-item>
               <i-nav-item :to="{ name: 'Markdownverwerker' }">Markdownverwerker</i-nav-item>
-              <!-- <i-nav-item :to="{ name: 'Markdownverwerker' }">Rechtenvrij beeld</i-nav-item> -->
+              <i-nav-item :to="{ name: 'Rechtenvrijbeeld' }">Rechtenvrij beeld</i-nav-item>
           </i-nav>
         </i-navbar-items>
       </i-navbar>

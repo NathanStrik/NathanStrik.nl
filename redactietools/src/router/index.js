@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Regeleindeverwijderaar from '../views/Linebreakremover.vue'
+import Markdownverwerker from '../views/Markdown.vue'
+import Rechtenvrijbeeld from '../views/Rechtenvrijbeeld.vue'
 
 Vue.use(VueRouter)
 
@@ -16,16 +19,24 @@ Vue.use(VueRouter)
     component: Home
   },
   {
+    path: '/linebreakremover',
+    name: 'Regeleindeverwijderaar',
+    component: Regeleindeverwijderaar
+  },
+  {
+    path: '/rechtenvrijbeeld',
+    name: 'Rechtenvrijbeeld',
+    component: Rechtenvrijbeeld
+  },
+  {
     path: '/markdown',
     name: 'Markdownverwerker',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Markdown.vue')
+    component: Markdownverwerker
   }
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 

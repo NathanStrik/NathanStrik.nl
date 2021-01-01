@@ -1,7 +1,7 @@
 <template>
   <i-column md="6" class="border-right">
     <h2 class="head2">Markdownverwerker</h2>
-    <MarkdownTools />
+    <!-- <MarkdownTools /> -->
     <i-textarea
       ref="textAreaMain"
       v-on:input="processText" 
@@ -14,13 +14,13 @@
 </template>
 
 <script>
-  import MarkdownTools from '@/components/MarkdownTools';
+  // import MarkdownTools from '@/components/MarkdownTools';
   import defaultMarkdown from '!raw-loader!../assets/default-markdown.txt';
 
   export default {
     name: 'MarkdownProcessor',
     components: {
-      MarkdownTools
+      // MarkdownTools
     },
     mounted() {
       this.$root.$on('eraseAll', () => {

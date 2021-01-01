@@ -2,7 +2,7 @@
   <div id="markdown">
     <Navbar/>
     <div class="editor">
-      <Actions />
+      <MarkdownActions />
       <i-row>
         <MarkdownProcessor @textupdate="changeText($event)"/>
         <HtmlPreview :text="text" />
@@ -13,7 +13,7 @@
 
 <script>
   import Navbar from '@/views/base/Navbar.vue';
-  import Actions from '@/components/Actions';
+  import MarkdownActions from '@/components/MarkdownActions';
   import MarkdownProcessor from '@/components/MarkdownProcessor';
   import HtmlPreview from '@/components/HtmlPreview';
 
@@ -22,7 +22,7 @@
     title: 'Markdownverwerker',
     components: {
       Navbar,
-      Actions,
+      MarkdownActions,
       MarkdownProcessor,
       HtmlPreview
     },
@@ -34,9 +34,6 @@
     methods: {
       changeText(newText) {
         this.text = newText;
-      },
-      eraseAll() {
-        this.text = 'Poep!';
       }
     },
     data() {

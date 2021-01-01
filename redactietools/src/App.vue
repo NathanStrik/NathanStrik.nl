@@ -1,54 +1,5 @@
 <template>
   <router-view/>
-  <!-- <i-container class="container">
-    <i-layout>
-      <i-layout-header>
-        <i-navbar variant="dark">
-          <i-navbar-brand :to="{ name: 'index' }">Navbar</i-navbar-brand>
-          <i-navbar-items>
-              <i-nav>
-                  <i-nav-item :to="{ name: 'index' }">Home</i-nav-item>
-                  <i-nav-item :to="{ name: 'about' }">About</i-nav-item>
-                  <i-nav-item :to="{ name: 'contact' }">Contact</i-nav-item>
-              </i-nav>
-          </i-navbar-items>
-        </i-navbar>
-      </i-layout-header>
-      
-      <i-layout-content>
-      </i-layout-content>
-    </i-layout>
-  </i-container> -->
-
-
-  <!-- <div id="app">
-    <i-container class="container">
-      <i-layout>
-        <i-layout-header>
-          <i-navbar>
-            <i-navbar-brand :to="{ name: 'index' }">Navbar</i-navbar-brand>
-            <i-navbar-items class="_justify-content-center">
-                <i-nav>
-                    <i-nav-item to="/">Home</i-nav-item>
-                    <i-nav-item to="/markdown">Markdown</i-nav-item>
-                </i-nav>
-            </i-navbar-items>
-          </i-navbar>
-        </i-layout-header>
-        <i-row id="nav">
-          Row
-        </i-row> -->
-
-        <!-- <i-row id="nav">
-          <i-nav>
-            <i-nav-item to="/">Home</i-nav-item> |
-            <i-nav-item to="/markdown">Markdown</i-nav-item>
-          </i-nav>
-        </i-row> -->
-        <!-- <router-view/> -->
-      <!-- </i-layout> -->
-    <!-- </i-container> -->
-  <!-- </div> -->
 </template>
 
 <style>
@@ -89,6 +40,123 @@
     font-weight: 650;
     font-size: 0.9em;
     height: 10px;
+  }
+
+  .hidden-feedback {
+    color: #36912c;
+    font-weight: 800;
+    position: relative;
+    left: 20px;
+    top: 4px;
+    visibility: hidden;
+  }
+
+  .fade-in {
+    visibility: visible;
+    animation: fadeIn ease 0.5s;
+    -webkit-animation: fadeIn ease 0.5s;
+    -moz-animation: fadeIn ease 0.5s;
+    -o-animation: fadeIn ease 0.5s;
+    -ms-animation: fadeIn ease 0.5s;
+  }
+
+  .fade-out {
+    visibility: visible;
+    animation: fadeOut ease 3s;
+    -webkit-animation: fadeOut ease 3s;
+    -moz-animation: fadeOut ease 3s;
+    -o-animation: fadeOut ease 3s;
+    -ms-animation: fadeOut ease 3s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+
+  @-moz-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+
+  @-webkit-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+
+  @-o-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+
+  @-ms-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
   }
 
   @media screen and (max-width: 767px) {
