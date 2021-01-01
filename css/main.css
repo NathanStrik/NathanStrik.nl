@@ -154,6 +154,24 @@
 
 /* END of CSS for hamburger-menu */
 
+.tool-link {
+  color: #aaffdd;
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 20px;
+  transform: translateY(12px);
+}
+
+.tool-link a {
+  color: #aaffdd;
+}
+
+.tool-link a:hover {
+  text-decoration: underline;
+}
+
 ul:hover li a
 {
   transform: scale(1);
@@ -398,6 +416,9 @@ footer
 
 @media screen and (max-width: 768px)
 {
+  .tool-link {
+    transform: translateY(8px);
+  }
 
   .menu-nav
   {
@@ -442,6 +463,18 @@ footer
 
 @media screen and (max-width: 600px)
 {
+
+  .tool-link {
+    color: #223355;
+    float: left;
+    left: 0;
+    top: 0;
+    margin-left: 20px;
+  }
+
+  .tool-link a {
+    color: #223355;
+  }
 
   .hambutton {
     display: block;
